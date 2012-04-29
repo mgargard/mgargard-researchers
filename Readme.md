@@ -3,13 +3,10 @@
 ## ID attribute values
 The application uses 
 
-## Testing your code
+## Rel attribute values
 
-To run your project, simply open `app.js` and click the `debug` button at the top of the screen (it looks like a green play button). You should see a message like this in the console:
-
-## Rel attributes
-
-a rel="homepage" is used on links that point to the application homepage
+'homepage' 
+Applied to an A tag. A reference to the application homepage/starting URI.
 
 a rel="all researchers" is used on links for the list-researchers page which points to all researchers resource
 
