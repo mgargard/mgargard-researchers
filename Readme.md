@@ -1,20 +1,42 @@
-# An example web information service
+# Researcher Publication application
 
-This is an example application intended to be used as a starting point for the final project in [INLS 490-186 Web Information Organization](http://aeshin.org/teaching/inls-490-186/2012/sp/).
+## ID attribute values
+The application uses 
 
-## Forking this repository
+## Testing your code
 
-You will want to start by [forking](http://help.github.com/fork-a-repo/) this repository so you have your own copy to modify. If you decide to work in a group, I will put a copy of the code in your shared repository. (While it's possible to collaborate with your group by pushing and pulling commits across your two or three separate forks, doing so requires somewhat advanced knowledge of Git and thus isn't expected for this assignment.)
+To run your project, simply open `app.js` and click the `debug` button at the top of the screen (it looks like a green play button). You should see a message like this in the console:
 
-If you're working alone, please **rename your GitHub repository** to something more suitable for your service. You can do this by clicking on the ![admin](/sils-webinfo/election/raw/master/doc/img/admin.png) button from your repository's page on GitHub. A one-word, no-spaces name is best. (If you're working in a group the repository will be named after your group).
+## Rel attributes
 
-## Cloning your project in Cloud9
+a rel="homepage" is used on links that point to the application homepage
 
-If you're working alone, and you've successfully forked the repository to your own GitHub account, then cloning your project into Cloud9 is simple. Just sign in to [Cloud9](http://c9.io) using your GitHub account (click the little green [Octocat](http://octodex.github.com/) icon). Your dashboard should open, and you will see a list of `PROJECTS ON GITHUB` on the left. Select your project and click the green `CLONE TO EDIT` button.
+a rel="all researchers" is used on links for the list-researchers page which points to all researchers resource
+
+a rel="reseacher" is used on links that point to an individual researcher resource
+
+a rel="all pubblications" is used on links for the list-publications page which points to all researchers resource
+
+a rel="publication information" is used on links that point to an individual publication resource
+
+
+## Class attribute values
+
+class="menu" is used to display and format the top navigation links across each page
+
+class="researcher" is used to format the top content div on a page
+
+class="control"
 
 If you're in a group, your GitHub repository won't show up in the list of GitHub projects, so you need to click the plus-sign button next to `MY PROJECTS` on the left, and select `Clone From URL`. Then (in another browser tab) go to the homepage of your team's repository, and copy the URL next to where it says `Read+Write access` (it should look something like `git@github.com:sils-webinfo/SteampunkUnicorn.git` if `SteampunkUnicorn` were the name of your group). Go back to Cloud9, paste this URL in the `Source URL` field, and click the green `CHECKOUT` button. Cloud9 should start cloning your project. (Sometimes it flakes out; if it does just try again.)
 
-## Modifying the example code
+## Id attributes
+
+<form id="frmSearchPub" method="get" action="/publications/">
+
+<form id="frmAddEditRes" method="post" action="/researchers/" onsubmit="return onFormSubmit(this);">
+
+
 
 There are only three places where the example service needs to be modified to implement your own service:
 

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Election Data: Home</title>
+    <title>Researcher Publication Data:: Home</title>
   </head>
   <body>
-    <a href="/"><h1>Election Data</h1></a>
+    <a rel="homepage" href="/"><h1>Researcher Publication Data</h1></a>
+
+    <div itemscope itemtype="http://schema.or/Person">
+      <a rel="all researchers" itemprop="url" href="/researchers/"><h2>List of researchers</h2></a>
     <div>
-      <a href="/parties/"><h2>List of political parties</h2></a>
-    <div>
-    <div>
-      <a href="/candidates/"><h2>List of candidates</h2></a>
+    <div itemscope itemtype="http://schema.or/ScholarlyArticle">
+      <a rel="all publications" itemprop="url" href="/publications/"><h2>List of publications</h2></a>
     <div>
   </body>
 </html>

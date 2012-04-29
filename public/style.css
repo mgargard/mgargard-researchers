@@ -2,15 +2,18 @@
   border: 1px solid gray;
   margin: 30px 10px 10px;
   padding: 10px;
+  clear: both;
 }
 .control h2 {
   margin: 10px 0; 
 }
+
 label, input, textarea, select, button {
   display: block;  
 }
 label {
   padding-top: 10px; 
+  font-weight: bold;
 }
 button {
   margin-top: 20px;
@@ -21,3 +24,83 @@ dt {
 dd {
   margin: 0 0 10px 0;
 }
+
+.researcher {
+  float: left;
+  position: relative;
+  width: 99%;
+  margin-bottom: 30px;
+  clear: both;
+   margin-left: 20px;
+}
+
+#publications {
+  float: left;
+  position: relative;
+  width: 99%;
+  margin-bottom: 30px;
+  clear: both;
+   margin-left: 20px;
+}
+
+h3{ 
+    padding-top: 0px; 
+    margin-top: 0px; 
+}
+
+.picdiv {
+  float: left;
+  border: solid 1px #c0c0c0;
+  padding: 10px;
+  border-radius:5px;
+  margin-left: 20px;
+
+}
+
+.leftdiv {
+  float: left;
+  padding: 10px;
+}
+
+.resinfo {
+  float: left;
+  margin-left: 20px;
+  width: 450px;
+  font-weight: normal;
+}
+
+.abstract {
+  float: left;
+  margin-left: 20px;
+  width: 450px;
+  font-weight: normal;
+
+}
+
+.citation {
+  width: 98%;
+  margin-top: 20px;
+  padding: 10px;
+  display: block;
+  clear: both;
+}
+
+.menu {
+    margin-left: 20px;
+    float: left;
+    width: 99%;
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.menu ul {
+  display: inline;
+  list-style: none;
+
+}
+
+.menu li {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+ }
