@@ -5,12 +5,14 @@ The application uses
 
 ## Rel attribute values
 
-'homepage' 
-Applied to an A tag. A reference to the application homepage/starting URI.
+1. `homepage` 
+Applied to an A tag. A reference to the application homepage/starting URI.  
 
-a rel="all researchers" is used on links for the list-researchers page which points to all researchers resource
 
-a rel="reseacher" is used on links that point to an individual researcher resource
+1. `all researchers`
+Applied to an A tag. used on links for the list-researchers page which points to all researchers resource
+
+1. a rel="reseacher" is used on links that point to an individual researcher resource
 
 a rel="all pubblications" is used on links for the list-publications page which points to all researchers resource
 
