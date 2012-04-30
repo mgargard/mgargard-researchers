@@ -25,7 +25,7 @@ dd {
   margin: 0 0 10px 0;
 }
 
-.researcher {
+.main {
   float: left;
   position: relative;
   width: 99%;
@@ -77,20 +77,13 @@ h3{
 
 }
 
-.citation {
-  width: 98%;
-  margin-top: 20px;
-  padding: 10px;
-  display: block;
-  clear: both;
-}
-
 .menu {
     margin-left: 20px;
     float: left;
     width: 99%;
     clear: both;
     margin-bottom: 20px;
+    list-style: none;
 }
 
 .menu ul {

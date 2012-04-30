@@ -1,13 +1,13 @@
 # Researcher Publication application
 
 ## ID attribute values
-The application uses 
+The application uses  
 
-## Rel attribute values
+`menudiv` Applied to a div tag. Contains the list of the main pages in the application; the navigation menu.  
 
-1. `homepage` 
-Applied to an A tag. A reference to the application homepage/starting URI.  
+## Rel attribute values  
 
+1. `homepage` Applied to an A tag. A reference to the application homepage/starting URI.  
 
 1. `all researchers`
 Applied to an A tag. used on links for the list-researchers page which points to all researchers resource
@@ -21,11 +21,17 @@ a rel="publication information" is used on links that point to an individual pub
 
 ## Class attribute values
 
-class="menu" is used to display and format the top navigation links across each page
+`menu` Applied to a ul element. List of the top menu items.
 
-class="researcher" is used to format the top content div on a page
+`main` Applied to a div element. Main content on a page; right beneath the menu. 
+Could be a list of publications or researchers, or an individual researcher or publication information. 
 
-class="control"
+`researcher` Applied to a div tag. Representation for a researcher. content div on a page  
+
+`control` Applied to a div tag. Contains a form and its elements. 
+
+
+
 
 If you're in a group, your GitHub repository won't show up in the list of GitHub projects, so you need to click the plus-sign button next to `MY PROJECTS` on the left, and select `Clone From URL`. Then (in another browser tab) go to the homepage of your team's repository, and copy the URL next to where it says `Read+Write access` (it should look something like `git@github.com:sils-webinfo/SteampunkUnicorn.git` if `SteampunkUnicorn` were the name of your group). Go back to Cloud9, paste this URL in the `Source URL` field, and click the green `CHECKOUT` button. Cloud9 should start cloning your project. (Sometimes it flakes out; if it does just try again.)
 
@@ -49,21 +55,7 @@ There are only three places where the example service needs to be modified to im
 
 1. Finally, you need to edit [`package.json`](https://github.com/sils-webinfo/election/blob/master/package.json) and change the value of the `name` property to whatever you named your project.
 
-## Testing your code
 
-To run your project, simply open `app.js` and click the `debug` button at the top of the screen (it looks like a green play button). You should see a message like this in the console:
-
-```
-Tip: you can access long running processes, like a server, at 'http://election.rybesh.c9.io'.
-Important: in your scripts, use 'process.env.PORT' as port and '0.0.0.0' as host.
-debugger listening on port 54263
-```
-
-Clicking on the URL (in my case, `http://election.rybesh.c9.io` since `rybesh` is my GitHub/Cloud9 username) should open a new browser tab or window to your web app.
-
-If you get an error message, it's probably because you forgot to set `USER_OR_GROUP_NAME` (see above) or due to a syntax error somewhere in `app.js` (look for red `X`s along the left margin of the editor when you open `app.js`). 
-
-## Troubleshooting
 
 Running your app in Cloud9 and looking at the console output should help you troubleshoot basic problems. You can add logging messages to `app.js` like this:
 
