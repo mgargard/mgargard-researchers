@@ -19,14 +19,10 @@
 
 1. `all publications` Applied to an A tag. Used on links for the list-researchers page which points to all researchers resource.
 
-1. `researcher` is used on links that point to an individual researcher resource.
+1. `researcher` Applied to an A tag. is used on links that point to an individual researcher resource.
 
-1. `publication` is used on links that point to an individual publication resource.
+1. `publication` Applied to an A tag. is used on links that point to an individual publication resource.
 
-
-a rel="all pubblications" is used on links for the list-publications page which points to all researchers resource
-
-a rel="publication information" is used on links that point to an individual publication resource
 
 
 ## Class attribute values
@@ -52,6 +48,8 @@ Could be a list of publications or researchers, or an individual researcher or p
 
 1. `updatepublication` Applied to a form element. Uses POST (method="post" action="/publications/<%=item._id%>">) to update a publication resource. 
 Will actually use PUT since it has a hidden input with method="put".
+
+1. `searchpub` Applied to a form element. Uses GET (method="get" action="/publications/") to display publication information.
 
 1. `item[title]` Applied to input[text] element. The title of a publication. 
 
