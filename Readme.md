@@ -28,20 +28,20 @@
 
 ## Class attribute values
 
-1. `menu` Applied to a ul element. List of the top menu items. 
+1. `menu` Applied to a ul element. List of the top menu items. Inlcudes style for UL and LI elements in the list. 
 
 1. `main` Applied to a div element. Main content on a page, beneath the menu. 
 Could be a list of publications or researchers, or an individual researcher or publication information. 
 
-1. `researcher` Applied to a div tag. Representation for a researcher. content div on a page  
-
-1. `control` Applied to a div tag. Contains a form and its elements, used to add or edit researcher or publication data. 
-
-1. `control` Applied to a div tag. Contains a form and its elements.
-
 1. `respic` Applied to a div tag. Contains the photo of a researcher when viewing a researcher representation. 
 
 1. `resinfo` Applied to a div tag. Contains the information for a researcher when viewing a researcher representation.
+
+1. `leftdiv` Applied to a div tag. Left div in a publication representation. Contians the researcher, journal and publication date. 
+
+1. `abstract` Applied to a div tag. Contains the abstract for a publication.
+
+1. `control` Applied to a div tag. Contains a form and its elements. Used on multiple pages with form to add, update or get a resource. 
 
 
 ## Name attribute values
