@@ -6,9 +6,11 @@
 
 `author` Applied to a div tag. Representation for a single researcher. 
 
-`publications` Applied to a div tag. List of all publications - in the system, for a search or filter, or for a given researcher. 
+`listpublications` Applied to a div tag. List of all publications - in the system, for a search or filter, or for a given researcher. 
 
 `publication` Applied to a div tag. Representation for a single publication. 
+
+`listresearchers` Applied to a div tag. List of all researchers in the system.
 
 
 ## Rel attribute values  
@@ -17,11 +19,11 @@
 
 1. `all researchers` Applied to an A tag. Used on links for the list-researchers page which points to all researchers resource.
 
-1. `all publications` Applied to an A tag. Used on links for the list-researchers page which points to all researchers resource.
+1. `all publications` Applied to an A tag. Used on links for the list-researchers page which points to all publications resource.
 
-1. `researcher` Applied to an A tag. is used on links that point to an individual researcher resource.
+1. `researcher` Applied to an A tag. Used on links that point to an individual researcher resource.
 
-1. `publication` Applied to an A tag. is used on links that point to an individual publication resource.
+1. `publication` Applied to an A tag. Used on links that point to an individual publication resource.
 
 
 
