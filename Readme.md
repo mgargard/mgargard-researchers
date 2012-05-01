@@ -2,15 +2,15 @@
 
 ## ID attribute values  
 
-`menudiv` Applied to a div tag. Contains the list of the main pages in the application; the navigation menu.  
+1. `menudiv` Applied to a div tag. Contains the list of the main pages in the application; the navigation menu.  
 
-`author` Applied to a div tag. Representation for a single researcher. 
+1. `author` Applied to a div tag. Representation for a single researcher. 
 
-`listpublications` Applied to a div tag. List of all publications - in the system, for a search or filter, or for a given researcher. 
+1. `listpublications` Applied to a div tag. List of all publications - in the system, for a search or filter, or for a given researcher. 
 
-`publication` Applied to a div tag. Representation for a single publication. 
+1. `publication` Applied to a div tag. Representation for a single publication. 
 
-`listresearchers` Applied to a div tag. List of all researchers in the system.
+1. `listresearchers` Applied to a div tag. List of all researchers in the system.
 
 
 ## Rel attribute values  
@@ -24,7 +24,6 @@
 1. `researcher` Applied to an A tag. Used on links that point to an individual researcher resource.
 
 1. `publication` Applied to an A tag. Used on links that point to an individual publication resource.
-
 
 
 ## Class attribute values
@@ -43,6 +42,7 @@ Could be a list of publications or researchers, or an individual researcher or p
 1. `respic` Applied to a div tag. Contains the photo of a researcher when viewing a researcher representation. 
 
 1. `resinfo` Applied to a div tag. Contains the information for a researcher when viewing a researcher representation.
+
 
 ## Name attribute values
 
@@ -72,15 +72,6 @@ Will actually use PUT since it has a hidden input with method="put".
 1. `item[researcher]` Applied to input[text] or input[hidden] element. The ID of a researcher. 
 
 1. `item[]` Applied to input[text] or input[hidden] element. The ID of a researcher.
-
-
-    ```javascript
-    var USER_OR_GROUP_NAME = ''; // TODO: Insert GitHub username or group name.
-    ```
-
-1. The [`views`](https://github.com/sils-webinfo/election/tree/master/views) directory contains all the EJS ([Embedded JavaScript](http://embeddedjs.com/)) templates for the service. You will need to create new templates suitable for your application, using these examples as models. The templates should include the metadata describing your application flow and data.
-
-1. Finally, you need to edit [`package.json`](https://github.com/sils-webinfo/election/blob/master/package.json) and change the value of the `name` property to whatever you named your project.
 
 
 
