@@ -4,9 +4,12 @@
 
 `menudiv` Applied to a div tag. Contains the list of the main pages in the application; the navigation menu.  
 
-`author` Applied to a div tag. Representation for a sepecific researcher. 
+`author` Applied to a div tag. Representation for a single researcher. 
 
 `publications` Applied to a div tag. List of all publications - in the system, for a search or filter, or for a given researcher. 
+
+`publication` Applied to a div tag. Representation for a single publication. 
+
 
 ## Rel attribute values  
 
@@ -47,6 +50,9 @@ Could be a list of publications or researchers, or an individual researcher or p
 
 1. `addpublication` Applied to a form element. Uses POST (method="post" action="/publications/) to add a publication for a researcher. 
 
+1. `updatepublication` Applied to a form element. Uses POST (method="post" action="/publications/<%=item._id%>">) to update a publication resource. 
+Will actually use PUT since it has a hidden input with method="put".
+
 1. `item[title]` Applied to input[text] element. The title of a publication. 
 
 1. `item[bio]` Applied to a textarea tag. The biography of a researcher. 
@@ -61,11 +67,11 @@ Could be a list of publications or researchers, or an individual researcher or p
 
 1. `item[pubdate]` Applied to input[text] tag. The date the article was publised.
 
-1. `item[abstract]` Applied to input[text] tag. The abstract of the publication/article.
+1. `item[abstract]` Applied to textarea tag. The abstract of the publication/article.
 
 1. `item[researcher]` Applied to input[text] or input[hidden] element. The ID of a researcher. 
 
-
+1. `item[]` Applied to input[text] or input[hidden] element. The ID of a researcher.
 
 
     ```javascript
