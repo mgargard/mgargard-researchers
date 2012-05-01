@@ -1,18 +1,24 @@
 # Researcher Publication application
 
-## ID attribute values
-The application uses  
+## ID attribute values  
 
 `menudiv` Applied to a div tag. Contains the list of the main pages in the application; the navigation menu.  
+
+`author` Applied to a div tag. Representation for a sepecific researcher. 
 
 ## Rel attribute values  
 
 1. `homepage` Applied to an A tag. A reference to the application homepage/starting URI.  
 
-1. `all researchers`
-Applied to an A tag. used on links for the list-researchers page which points to all researchers resource
+1. `all researchers` Applied to an A tag. Used on links for the list-researchers page which points to all researchers resource.
 
-1. a rel="reseacher" is used on links that point to an individual researcher resource
+1. `all publications` Applied to an A tag. Used on links for the list-researchers page which points to all researchers resource.
+
+1. `researcher` is used on links that point to an individual researcher resource.
+
+1. `publication` is used on links that point to an individual publication resource.
+
+
 
 a rel="all pubblications" is used on links for the list-publications page which points to all researchers resource
 
@@ -21,31 +27,28 @@ a rel="publication information" is used on links that point to an individual pub
 
 ## Class attribute values
 
-`menu` Applied to a ul element. List of the top menu items.
+1. `menu` Applied to a ul element. List of the top menu items. 
 
-`main` Applied to a div element. Main content on a page; right beneath the menu. 
+1. `main` Applied to a div element. Main content on a page, beneath the menu. 
 Could be a list of publications or researchers, or an individual researcher or publication information. 
 
-`researcher` Applied to a div tag. Representation for a researcher. content div on a page  
+1. `researcher` Applied to a div tag. Representation for a researcher. content div on a page  
 
-`control` Applied to a div tag. Contains a form and its elements. 
+1. `control` Applied to a div tag. Contains a form and its elements, used to add or edit researcher or publication data. 
 
+1. `control` Applied to a div tag. Contains a form and its elements.
 
+1. `respic` Applied to a div tag. Contains the photo of a researcher when viewing a researcher resentation. 
 
+## Name attribute values
 
-If you're in a group, your GitHub repository won't show up in the list of GitHub projects, so you need to click the plus-sign button next to `MY PROJECTS` on the left, and select `Clone From URL`. Then (in another browser tab) go to the homepage of your team's repository, and copy the URL next to where it says `Read+Write access` (it should look something like `git@github.com:sils-webinfo/SteampunkUnicorn.git` if `SteampunkUnicorn` were the name of your group). Go back to Cloud9, paste this URL in the `Source URL` field, and click the green `CHECKOUT` button. Cloud9 should start cloning your project. (Sometimes it flakes out; if it does just try again.)
+1. `title` Applied to input tag. A reference to title of a publication. 
 
-## Id attributes
+1. `item[bio]` Applied to a textarea tag. Used to enter a researcher's bio. 
 
-<form id="frmSearchPub" method="get" action="/publications/">
+1. `item[image]` Applied to an input[text]. the URL of the researcher's image.
 
-<form id="frmAddEditRes" method="post" action="/researchers/" onsubmit="return onFormSubmit(this);">
-
-
-
-There are only three places where the example service needs to be modified to implement your own service:
-
-1. [`app.js`](https://github.com/sils-webinfo/election/blob/master/app.js) contains all the logic for handling HTTP requests. You may just need to modify the examples in this file, or you may need to add additional request handlers by copying, pasting, and modifying these examples. The only parts you should *need* to change are marked with with `TODO` comments. In particular, make sure you edit the value of the `USER_OR_GROUP_NAME` variable at the top of this file to match your GitHub user name (if you're working alone) or your group name:
+1. `item[field]` Applied to an input[text] element. 
 
     ```javascript
     var USER_OR_GROUP_NAME = ''; // TODO: Insert GitHub username or group name.

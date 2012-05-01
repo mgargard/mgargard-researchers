@@ -31,7 +31,12 @@ dd {
   width: 99%;
   margin-bottom: 30px;
   clear: both;
-   margin-left: 20px;
+  margin-left: 20px;
+  border: solid 1px gold;
+}
+
+.main ul {
+  margin-top: 0px;
 }
 
 #publications {
@@ -40,7 +45,7 @@ dd {
   width: 99%;
   margin-bottom: 30px;
   clear: both;
-   margin-left: 20px;
+  margin-left: 20px;
 }
 
 h3{ 
@@ -48,7 +53,7 @@ h3{
     margin-top: 0px; 
 }
 
-.picdiv {
+.respic {
   float: left;
   border: solid 1px #c0c0c0;
   padding: 10px;
@@ -84,6 +89,7 @@ h3{
     clear: both;
     margin-bottom: 20px;
     list-style: none;
+    border: solid 1px red;
 }
 
 .menu ul {
