@@ -32,7 +32,6 @@ dd {
   margin-bottom: 30px;
   clear: both;
   margin-left: 20px;
-  border: solid 1px gold;
 }
 
 .main ul {
@@ -43,7 +42,6 @@ dd {
   float: left;
   position: relative;
   width: 99%;
-  /*margin-bottom: 30px; */
   clear: both;
   margin-left: 20px;
 }
@@ -89,7 +87,6 @@ h3{
     clear: both;
     margin-bottom: 20px;
     list-style: none;
-    border: solid 1px red;
 }
 
 .menu ul {

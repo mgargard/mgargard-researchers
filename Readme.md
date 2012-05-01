@@ -51,9 +51,13 @@ Could be a list of publications or researchers, or an individual researcher or p
 1. `updatepublication` Applied to a form element. Uses POST (method="post" action="/publications/<%=item._id%>">) to update a publication resource. 
 Will actually use PUT since it has a hidden input with method="put".
 
+1. `addresearcher` Applied to a form element. Uses POST and PUT to add and update a researhcer resource. 
+
 1. `searchpub` Applied to a form element. Uses GET (method="get" action="/publications/") to display publication information.
 
-1. `item[title]` Applied to input[text] element. The title of a publication. 
+1. `item[id]` Applied to input[text] element. The ID for a researcher. 
+
+1. `item[name]` Applied to input[text] element. The name of the researcher. 
 
 1. `item[bio]` Applied to a textarea tag. The biography of a researcher. 
 
@@ -63,6 +67,8 @@ Will actually use PUT since it has a hidden input with method="put".
 
 1. `item[articleID]` Applied to input[text] tag. The ID of the publication.
 
+1. `item[title]` Applied to input[text] element. The title of a publication.
+
 1. `item[journal]` Applied to input[text] tag. The journal that published the article. 
 
 1. `item[pubdate]` Applied to input[text] tag. The date the article was publised.
@@ -70,8 +76,6 @@ Will actually use PUT since it has a hidden input with method="put".
 1. `item[abstract]` Applied to textarea tag. The abstract of the publication/article.
 
 1. `item[researcher]` Applied to input[text] or input[hidden] element. The ID of a researcher. 
-
-1. `item[]` Applied to input[text] or input[hidden] element. The ID of a researcher.
 
 
 
