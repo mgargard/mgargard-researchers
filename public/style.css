@@ -43,7 +43,7 @@ dd {
   float: left;
   position: relative;
   width: 99%;
-  margin-bottom: 30px;
+  /*margin-bottom: 30px; */
   clear: both;
   margin-left: 20px;
 }

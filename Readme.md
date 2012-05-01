@@ -6,6 +6,8 @@
 
 `author` Applied to a div tag. Representation for a sepecific researcher. 
 
+`publications` Applied to a div tag. List of all publications - in the system, for a search or filter, or for a given researcher. 
+
 ## Rel attribute values  
 
 1. `homepage` Applied to an A tag. A reference to the application homepage/starting URI.  
@@ -17,7 +19,6 @@
 1. `researcher` is used on links that point to an individual researcher resource.
 
 1. `publication` is used on links that point to an individual publication resource.
-
 
 
 a rel="all pubblications" is used on links for the list-publications page which points to all researchers resource
@@ -38,17 +39,34 @@ Could be a list of publications or researchers, or an individual researcher or p
 
 1. `control` Applied to a div tag. Contains a form and its elements.
 
-1. `respic` Applied to a div tag. Contains the photo of a researcher when viewing a researcher resentation. 
+1. `respic` Applied to a div tag. Contains the photo of a researcher when viewing a researcher representation. 
+
+1. `resinfo` Applied to a div tag. Contains the information for a researcher when viewing a researcher representation.
 
 ## Name attribute values
 
-1. `title` Applied to input tag. A reference to title of a publication. 
+1. `addpublication` Applied to a form element. Uses POST (method="post" action="/publications/) to add a publication for a researcher. 
 
-1. `item[bio]` Applied to a textarea tag. Used to enter a researcher's bio. 
+1. `item[title]` Applied to input[text] element. The title of a publication. 
 
-1. `item[image]` Applied to an input[text]. the URL of the researcher's image.
+1. `item[bio]` Applied to a textarea tag. The biography of a researcher. 
 
-1. `item[field]` Applied to an input[text] element. 
+1. `item[image]` Applied to an input[text]. The URL of the researcher's image.
+
+1. `item[field]` Applied to an input[text] element. The field of study for the researcher.
+
+1. `item[articleID]` Applied to input[text] tag. The ID of the publication.
+
+1. `item[journal]` Applied to input[text] tag. The journal that published the article. 
+
+1. `item[pubdate]` Applied to input[text] tag. The date the article was publised.
+
+1. `item[abstract]` Applied to input[text] tag. The abstract of the publication/article.
+
+1. `item[researcher]` Applied to input[text] or input[hidden] element. The ID of a researcher. 
+
+
+
 
     ```javascript
     var USER_OR_GROUP_NAME = ''; // TODO: Insert GitHub username or group name.
