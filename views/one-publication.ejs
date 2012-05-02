@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Election Data: <%=item.name%></title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <a href="/" rel="homepage"><h1>Researcher Publication Data</h1></a>
+   
+<div id="menudiv">
+<ul class="menu">
+    <li> 
+    <a rel="homepage" href="/">Home</a>
+    </li>
+      <li>
+      <a rel="all researchers" href="/researchers/">All Researchers</a>
+    </li>
+    <li>
+      <a rel="all publications" href="/publications/">All Publications</a>
+    </li>
+</ul>
+</div>
+
+<div id="publication" itemscope itemtype="http://schema.org/ScholarlyArticle" class="main">
+      <dd itemprop="name"><h3><%=item.title%></h3></dd>
+    <div class="leftdiv">
+      <dt>Researcher</dt>
+    <dd itemprop='author' itemscope='' itemtype='http://schema.org/Person'>
+        <a href="/researchers/<%=item.researcher%>" rel="author" itemprop='url'>
+
+        <%=item.researcher%>
+
+         </a>
+    </dd>
+
+      <dt>Journal</dt>
+      <dd itemprop="publisher"><%=item.journal%></dd>
+
+      <dt>Date Published</dt>
+      <dd itemprop="datePublished"><%=item.pubdate%></dd>
+    </div>
+
+    <div class="abstract">
+      <dt>Abstract</dt>
+      <dd itemprop="description"><%=item.abstract%></dd>
+    </div>
+
+</div>
+
+
+    <div class="control">
+      <h2>Update publication</h2>
+      <form name="updatepublication" method="post" action="/publications/<%=item._id%>">
+        <input type="hidden" name="_method" value="put">
+        <!-- The line above tells the server to treat this as a PUT request. -->
+        
+            <label>Article ID: 
+          <input name="item[articleID]" type="text" value="<%=item.articleID%>" required
+                   placeholder="article ID">
+        </label>
+
+      <label>Researcher: 
+          <select name="item[researcher]" required>
+            <% related_items.forEach(function(related_item) { %>
+            <option value="<%=related_item._id%>" 
+              <% if (related_item._id === item.researcher) { %>selected<% } %>>
+              <%=related_item.name%>
+            </option>
+            <% }); %>
+          </select>
+        </label>
+
+        <label>Title: 
+          <input name="item[title]" value="<%=item.title%>" size="50" type="text" required
+                   placeholder="article title">
+        </label>
+  
+        <label>Journal: 
+          <input name="item[journal]" value="<%=item.journal%>" size="50" type="text" required
+                   placeholder="journal">
+        </label>
+
+        <label>Publication date: 
+          <input name="item[pubdate]" value="<%=item.pubdate%>" size="50" type="text" required
+                   placeholder="date published">
+        </label>
+
+        <label>Abstract:
+          <textarea name="item[abstract]" type="text" cols="65" rows="10"><%=item.abstract%>
+          </textarea>
+        </label>
+
+
+        <button id="btnUpdatePub">Update</button>
+      </form>
+    </div>
+  </body>
+</html>

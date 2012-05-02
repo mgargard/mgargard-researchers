@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Researcher Publication Data: <%=item.name%></title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+
+ <a rel="homepage" href="/"><h1>Researcher Publication Data</h1></a>
+
+<div id="menudiv">
+<ul class="menu">
+    <li> 
+    <a rel="homepage" href="/">Home</a>
+    </li>
+      <li>
+      <a rel="all researchers" href="/researchers/">All Researchers</a>
+    </li>
+    <li>
+      <a rel="all publications" href="/publications/">All Publications</a>
+    </li>
+</ul>
+</div>
+
+<div id="author" itemprop="author" itemscope itemtype="http://schema.org/Person" class="main">  
+      <% if (item.image) { %>
+    <div class="respic">
+      <dd><img itemprop="image" src="<%=item.image%>" alt="<%=item.name%>" width="250px"></dd>
+      <% } %>
+    </div>
+
+    <div class="resinfo"> 
+      <span  itemprop="name"><h3><%=item.name%></h3></span>
+      <% if (item.field) { %>
+      <dt itemtype="http://schema.org/Person/Field">Field of Expertise</dt>
+      <dd itemprop="field"><%=item.field%></dd>
+      <% } %>
+ 
+    <dl>
+      <% if (item.bio) { %>
+      <dt>Bio</dt>
+      <dd itemprop="description"><%=item.bio%></dd>
+      <% } %>
+    </dl>
+    </div>
+</div>
+
+<div id="listpublications">
+      <dt>Publications</dt>
+       <dd>
+        <% if (related_items.length > 0) { %>
+        <ul>
+          <% related_items.forEach(function(related_item) { %>
+          <li itemscope itemtype="http://schema.org/ScholarlyArticle" itemref="author">
+            <a itemprop="url" rel="publication" href="/publications/<%=related_item._id%>" >
+             <span itemprop="name"> <%=related_item.title%>  </span>
+            </a>
+            <span itemprop="datePublished">(<%=related_item.pubdate%>) </span>
+          </li>
+          <% }); %>
+        </ul>
+        <% } else { %>
+        No publications have been added for this researcher.
+        <% } %>
+      </dd>
+    </dl>
+</div>
+
+    <div class="control">
+      <h2>Add a new publication</h2>
+      <form name="addpublication" method="post" action="/publications/">
+        <input type="hidden" name="item[researcher]" value="<%=item._id%>">
+        <!-- The line above links the publication to be created to this researcher. -->
+
+        <label>Article ID: 
+          <input name="item[articleID]" type="text" required 
+                   placeholder="article ID">
+        </label> 
+        <label>Title: 
+          <input name="item[title]" type="text" required size="50"
+                   placeholder="article title">
+        </label> 
+        <label>Journal: 
+          <input name="item[journal]" type="text" required size="50"
+                   placeholder="journal">
+        </label>
+                <label>Publication date: 
+          <input name="item[pubdate]" type="date" required size="50"
+                   placeholder="date published">
+        </label>
+        <label>Abstract:
+        <textarea name="item[abstract]" type="text" cols="65" rows="10" 
+                    placeholder="article abstract">
+        </textarea>
+        </label>  
+
+        <button>Add</button>
+      </form>
+    </div>
+
+  </body>
+</html>
