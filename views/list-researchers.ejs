@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Researcher Publication Data: Researchers</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+
+    <a rel="homepage" href="/"><h1>Researcher Publication Data</h1></a>
+    
+<div id="menudiv">
+<ul class="menu">
+ <li> 
+    <a rel="homepage" href="/">Home</a>
+    </li>
+      <li>
+      <a rel="all researchers" href="/researchers/">All Researchers</a>
+    </li>
+    <li>
+      <a rel="all publications" href="/publications/">All Publications</a>
+    </li>
+</li>
+</ul>
+</div>
+
+<div id="listresearchers" class="main">
+    <% if (items.length > 0) { %>
+    
+    <ul>
+      <% items.forEach(function(item) { %>
+      <li><a rel="researcher" href="/researchers/<%=item._id%>">
+           <%=item.name%></a></li>
+      <% }); %>
+    </ul>
+    <% } else { %>
+    <div>No researchers have been added.</div>
+    <% } %>
+</div>
+
+    
+    <div class="control">
+      <h2>Add or update researcher information</h2>
+      <script>
+      function onFormSubmit(form) {
+        form.action = form.action + form.elements['item[id]'].value;
+        console.log(form.action);
+        return true;
+      } 
+      </script>
+      <form method="post" action="/researchers/"
+            onsubmit="return onFormSubmit(this);">
+        <!-- The line above dynamically sets the PUT destination when the -->
+        <!-- form is submitted. -------------------------------------------->
+        <input type="hidden" name="_method" value="put">
+        <!-- The line above tells the server to treat this as a PUT request. -->
+       
+        <label>Researcher ID<br>
+          (lowercase letters only, no spaces):
+          <input name="item[id]" type="text" pattern="[a-z]+" required
+                 placeholder="first initial and last name">
+        </label>
+        <label>Researcher name: 
+          <input name="item[name]" type="text" required 
+            placeholder="researcher name">
+        </label>
+
+        <label>Field of expertise: 
+          <input name="item[field]" type="text" required
+                 placeholder="research field">
+        </label>
+
+        <label>Researcher image URL:
+          <input name="item[image]" type="url" size="80"
+                   placeholder="http://www.ronpaul2012.com/wp-content/themes/ronpaul/images/bg-header.jpg">
+        </label>
+
+        <label>Researcher bio:
+          <textarea name="item[bio]" cols="80" rows="10" 
+                    placeholder="researcher bio">
+          </textarea>
+        </label>
+        <button>Add or update</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+
