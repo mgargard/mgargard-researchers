@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Researcher Publication Data: Publications</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <a rel="homepage" href="/"><h1>Researcher Publication Data</h1></a>
+
+<div id="menudiv">
+<ul class="menu">
+    <li> 
+    <a rel="homepage" href="/">Home</a>
+    </li>
+      <li>
+      <a rel="all researchers" href="/researchers/">All Researchers</a>
+    </li>
+    <li>
+      <a rel="all publications" href="/publications/">All Publications</a>
+    </li>
+</ul>
+</div>
+
+<div id="listpublications" class="main">
+    <% if (items.length > 0) { %>
+    <ul>
+      <% items.forEach(function(item) { %>
+      <li><a rel="publication" href="/publications/<%=item._id%>">
+        <%=item.title%></a></li>
+      <% }); %>
+    </ul>
+    <% } else { %>
+    <div>No publications found.</div>
+    <% } %>
+</div>
+
+    <div class="control">
+      <h2>Search for publication by name</h2>
+        (or filter by field)
+      <form name="searchpub" method="get" action="/publications/">
+        <label>Publication title/field: <input name="title" placeholder="keyword"></label>
+        <button>Search</button>
+      </form>
+    </div>
+
+  </body>
+</html>
