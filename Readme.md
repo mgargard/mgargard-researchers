@@ -59,41 +59,26 @@ Will actually use PUT since it has a hidden input with method="put".
 
 1. `item[name]` Applied to input[text] element. The name of the researcher. 
 
-1. `item[bio]` Applied to a textarea tag. The biography of a researcher. 
+1. `item[bio]` Applied to a textarea element. The biography of a researcher. 
 
-1. `item[image]` Applied to an input[text]. The URL of the researcher's image.
+1. `item[image]` Applied to an input[text] element. The URL of the researcher's image.
 
 1. `item[field]` Applied to an input[text] element. The field of study for the researcher.
 
-1. `item[articleID]` Applied to input[text] tag. The ID of the publication.
+1. `item[articleID]` Applied to input[text] element. The ID of the publication.
 
 1. `item[title]` Applied to input[text] element. The title of a publication.
 
-1. `item[journal]` Applied to input[text] tag. The journal that published the article. 
+1. `item[journal]` Applied to input[text] element. The journal that published the article. 
 
-1. `item[pubdate]` Applied to input[text] tag. The date the article was publised.
+1. `item[pubdate]` Applied to input[text] element. The date the article was publised.
 
-1. `item[abstract]` Applied to textarea tag. The abstract of the publication/article.
+1. `item[abstract]` Applied to textarea element. The abstract of the publication/article.
 
 1. `item[researcher]` Applied to input[text] or input[hidden] element. The ID of a researcher. 
 
+1. `item[researcher]` Applied to a select element. Researcher name for editing a publication. 
 
-
-Running your app in Cloud9 and looking at the console output should help you troubleshoot basic problems. You can add logging messages to `app.js` like this:
-
-```javascript
-console.log("Calculating grobble vectors…");
-```
-
-Then you when you run your app in Cloud9, you should see the text `Calculating grobble vectors…` in your console when that code is executed. Adding lots of console logging messages like this can help you understand when various parts of the program are running. You can also print out variables to see what their values are:
-
-```javascript
-// Get the item ID from the URI.
-var item_id = req.params.id;
-console.log("the item id is: ", item_id);
-```
-
-You may also want to verify that data is being created and updated in your database correctly. You can do this by going to [the admin tools for our shared database server](http://sils-webinfo.iriscouch.com/_utils/). Find your database in the list (it is named whatever you set `USER_OR_GROUP_NAME` to in `app.js`), and click it. You should see a list of all the "documents" (objects) in your database. Clicking on a document ID will show its details (properties and values).
 
 ## Deploying to Heroku
 
