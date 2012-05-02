@@ -75,9 +75,8 @@ Will actually use PUT since it has a hidden input with method="put".
 
 1. `item[abstract]` Applied to textarea element. The abstract of the publication/article.
 
-1. `item[researcher]` Applied to input[text] or input[hidden] element. The ID of a researcher. 
-
-1. `item[researcher]` Applied to a select element. Researcher name for editing a publication. 
+1. `item[researcher]` Applied to input[text] or input[hidden] element, ID of a researcher. Also applied to a select element, 
+researcher name for editing a publication. 
 
 
 ## Deploying to Heroku
